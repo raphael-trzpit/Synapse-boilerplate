@@ -1,0 +1,16 @@
+# Synapse Page Admin
+synapse_page_admin:
+    resource: "@SynapsePageBundle/Resources/config/routing/admin.yml"
+    prefix: "/{_locale}/admin"
+    defaults:
+        _locale: "%locale%"
+    options:
+        synapse_theme:
+            host: "^(\\w+)"
+
+default_admin:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: "/%locale%/admin"
+        permanent: true
