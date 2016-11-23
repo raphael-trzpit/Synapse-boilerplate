@@ -4,7 +4,7 @@ vm-up:
 vm-stop:
 	docker-compose stop
 ssh:
-	docker exec -it php_site -c 'bash'
+	docker exec -it php_site bash
 
 init-synapse: create-database-synapse update-schema-synapse install-assets-synapse
 
