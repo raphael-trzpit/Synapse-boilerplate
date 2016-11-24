@@ -81,5 +81,5 @@ synapse_cmf:
         # liste des types de composants, référez vous à la section dédiée
     media:
         store:
-            physical_path: "%kernel.root_dir%/../../web/assets"  # chemin de stockage des fichiers gérés par la médiathèque
+            physical_path: "%kernel.root_dir%/../web/assets"  # chemin de stockage des fichiers gérés par la médiathèque
             web_path: assets      # chemin d'accès des fichiers de la médiathèque à partir de la racine web

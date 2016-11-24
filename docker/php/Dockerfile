@@ -20,6 +20,16 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
       --install-dir=/usr/local/bin \
       --filename=composer \
 
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        libmagickwand-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pecl install imagick-3.4.1 \
+    && docker-php-ext-enable imagick
+
+RUN mkdir /var/www/assets
+
 RUN usermod -u 1000 www-data
 
 WORKDIR /var/www
