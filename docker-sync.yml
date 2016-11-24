@@ -1,0 +1,8 @@
+syncs:
+# this name has to be unique and is used in docker-compose.yml as well
+  challenge-synapse-sync:
+    src: './' # the directory on the host system
+    dest: '/var/www/' # the directory on the container
+    sync_host_ip: '127.0.0.1' # localhost for docker for mac
+    sync_host_port: 10922 # unique port
+    sync_strategy: 'unison'

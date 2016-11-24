@@ -4,8 +4,8 @@ services:
     php:
         container_name: php_site
         build: docker/php
-        volumes:
-            - .:/var/www
+        volumes_from:
+            - container:challenge-synapse-sync:rw
         ports:
             - "80:80"
         extra_hosts:
@@ -50,6 +50,8 @@ services:
 volumes:
     mysql-data:
     mysql-synapse-data:
+    challenge-synapse-sync:
+        external: true
 
 networks:
     back:
