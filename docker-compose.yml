@@ -47,6 +47,16 @@ services:
         volumes:
             - mysql-synapse-data:/var/lib/mysq
 
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: synapse_phpmyadmin
+        ports:
+            - 8080:80
+        networks:
+            back:
+        environment:
+            - PMA_HOST=mysql-synapse
+
 volumes:
     mysql-data:
     mysql-synapse-data:
