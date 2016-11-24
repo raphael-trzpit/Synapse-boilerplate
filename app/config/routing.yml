@@ -5,8 +5,7 @@ synapse_page_admin:
     defaults:
         _locale: "%locale%"
     options:
-        synapse_theme:
-            host: "^(\\w+)"
+        synapse_theme: bootstrap
 
 default_admin:
     path: /
@@ -14,3 +13,12 @@ default_admin:
         _controller: FrameworkBundle:Redirect:urlRedirect
         path: "/%locale%/admin"
         permanent: true
+
+# Front
+synapse_page_content:
+    resource: "@SynapsePageBundle/Resources/config/routing/content_type.yml"
+    prefix: /{_locale}
+    defaults:
+        _locale: %locale%
+    options:
+        synapse_theme: bootstrap

@@ -6,7 +6,7 @@ vm-stop:
 ssh:
 	docker exec -it php_site bash
 
-init-synapse: create-database-synapse update-schema-synapse install-assets-synapse
+init-synapse: create-database-synapse update-schema-synapse install-assets-synapse install-fixtures-synapse
 
 create-database-synapse:
 	php bin/console doc:dat:cre --connection=synapse --if-not-exists
@@ -16,3 +16,6 @@ update-schema-synapse:
 
 install-assets-synapse:
 	php bin/console assets:install --symlink
+
+install-fixtures-synapse:
+	php bin/console doctrine:fixtures:load --em=synapse

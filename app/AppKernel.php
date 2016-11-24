@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new Synapse\Cmf\Bundle\SynapseCmfBundle(),
             new Synapse\Page\Bundle\SynapsePageBundle(),
             new Synapse\Admin\Bundle\SynapseAdminBundle(),
+            new Synapse\Demo\Bundle\ThemeBundle\SynapseDemoThemeBundle(),
+            new Synapse\Demo\Bundle\AppBundle\SynapseDemoAppBundle(),
             new AppBundle\AppBundle(),
         ];
 
@@ -28,6 +30,7 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
         }
 
         return $bundles;
