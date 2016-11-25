@@ -3,3 +3,8 @@ services:
         class: AppBundle\Component\Social\SocialController
         arguments:
             - '@synapse'
+
+    # app.video.repository:
+    #     class: AppBundle\ContentType\Video\Repository
+    #     factory: ['@doctrine', getRepository]
+    #     arguments: ['AppBundle\ContentType\Video\Entity']

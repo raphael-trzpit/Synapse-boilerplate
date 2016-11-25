@@ -1,8 +1,23 @@
 # Synapse Content Type
 synapse_cmf:
-    content_types: ~
+    content_types:
+        # AppBundle\ContentType\Video\Entity:
+        #     alias: video
+        #     provider: app.video.repository
     components:
         social:
             form: 'AppBundle\Component\Social\SocialType'
             controller: 'app.social.controller:render'
             template_path: "AppBundle:Component:social.html.twig"
+
+doctrine:
+    orm:
+        entity_managers:
+            app:
+                connection: synapse
+                mappings:
+                    AppBundle:
+                        type: yml
+                        dir: Resources/orm
+                        prefix: AppBundle
+                        alias: App
