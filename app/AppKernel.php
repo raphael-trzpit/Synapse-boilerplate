@@ -21,7 +21,7 @@ class AppKernel extends Kernel
             new Synapse\Page\Bundle\SynapsePageBundle(),
             new Synapse\Admin\Bundle\SynapseAdminBundle(),
             new Synapse\Demo\Bundle\ThemeBundle\SynapseDemoThemeBundle(),
-            new Synapse\Demo\Bundle\AppBundle\SynapseDemoAppBundle(),
+            new ThemeBundle\ThemeBundle(),
             new AppBundle\AppBundle(),
         ];
 

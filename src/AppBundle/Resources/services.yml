@@ -1,0 +1,5 @@
+services:
+    app.social.controller:
+        class: AppBundle\Component\Social\SocialController
+        arguments:
+            - '@synapse'

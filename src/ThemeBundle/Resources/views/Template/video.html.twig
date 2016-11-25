@@ -1,0 +1,22 @@
+{% block body %}
+<h1>My video template</h1>
+<div class="container">
+    <header>
+        {{ synapse_zone('header')}}
+    </header>
+
+{% block content %}
+    <div class="row">
+        {{ synapse_zone('content') }}
+    </div>
+{% endblock %}
+
+
+    <footer>
+        <div class="row">
+            {{ synapse_zone('footer')}}
+        </div>
+    </footer>
+</div> <!-- /container -->
+
+{% endblock %}

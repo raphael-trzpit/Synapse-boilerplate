@@ -1,0 +1,8 @@
+# Synapse Content Type
+synapse_cmf:
+    content_types: ~
+    components:
+        social:
+            form: 'AppBundle\Component\Social\SocialType'
+            controller: 'app.social.controller:render'
+            template_path: "AppBundle:Component:social.html.twig"

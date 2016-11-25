@@ -40,6 +40,8 @@ services:
             - MYSQL_DATABASE=synapse
         expose:
             - 3306
+        ports:
+            - 3311:3306
         networks:
             back:
                 aliases:

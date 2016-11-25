@@ -22,3 +22,5 @@ install-fixtures-synapse:
 
 cache-clear:
 	php bin/console cache:clear
+	chmod -R 777 var/cache
+	chmod -R 777 var/logs

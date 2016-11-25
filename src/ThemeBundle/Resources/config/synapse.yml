@@ -1,0 +1,23 @@
+synapse:
+    demo:
+        structure:
+            video:
+                header:
+                    free: ~
+                content:
+                    free: ~
+                footer:
+                    social: ~
+                    free: ~
+
+        templates:
+            video:
+                path: "ThemeBundle:Template:video.html.twig"
+
+        zones:
+            header:
+                virtual: true
+                aggregation: inline
+            content:
+                main: true
+            footer: ~

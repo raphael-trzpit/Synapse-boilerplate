@@ -5,7 +5,7 @@ synapse_page_admin:
     defaults:
         _locale: "%locale%"
     options:
-        synapse_theme: bootstrap
+        synapse_theme: demo
 
 default_admin:
     path: /
@@ -21,4 +21,4 @@ synapse_page_content:
     defaults:
         _locale: %locale%
     options:
-        synapse_theme: bootstrap
+        synapse_theme: demo
