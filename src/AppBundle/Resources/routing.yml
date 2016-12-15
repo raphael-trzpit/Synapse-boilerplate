@@ -1,4 +1,11 @@
 # Videos.
 synapse_admin_video:
     resource: 'routing_video.yml'
-    prefix: /videos
+    prefix: /admin/videos
+
+app_front_video_video:
+    path: /videos/video/{id}
+    defaults:
+        _controller: "AppBundle:VideoFront:showTemplateVideo"
+    requirements:
+        id: \d+

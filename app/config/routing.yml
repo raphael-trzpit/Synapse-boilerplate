@@ -17,7 +17,7 @@ default_admin:
 # AppBundle
 app_routing:
     resource: "@AppBundle/Resources/routing.yml"
-    prefix: "/{_locale}/admin"
+    prefix: "/{_locale}"
     defaults:
         _locale: "%locale%"
     options:
