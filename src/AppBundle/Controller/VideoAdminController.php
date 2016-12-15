@@ -43,7 +43,9 @@ class VideoAdminController extends Controller
 
     public function editAction(Video $video, Request $request)
     {
-        $form = $this->createForm(VideoType::class, $video);
+        $form = $this->createForm(VideoType::class, $video, [
+            'synapse_theme' => $request->get('synapse_theme'),
+        ]);
 
         if ($request->request->has('video')) {
             $form->handleRequest($request);
