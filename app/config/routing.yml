@@ -14,6 +14,15 @@ default_admin:
         path: "/%locale%/admin"
         permanent: true
 
+# AppBundle
+app_routing:
+    resource: "@AppBundle/Resources/routing.yml"
+    prefix: "/{_locale}/admin"
+    defaults:
+        _locale: "%locale%"
+    options:
+        synapse_theme: demo
+
 # Front
 synapse_page_content:
     resource: "@SynapsePageBundle/Resources/config/routing/content_type.yml"

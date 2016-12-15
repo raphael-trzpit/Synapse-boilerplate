@@ -1,0 +1,50 @@
+{% extends 'SynapsePageBundle::layout.html.twig' %}
+
+{% block content %}
+<div class="row-fluid">
+  <div class="col-fill">
+    <div class="panel">
+      <header class="panel-heading composed bg-main">
+        <a href class="combo">
+          <i class="fa fa-files-o"></i>
+        </a>
+        <h3>Videos</h3>
+      </header>
+      <table class="table table-striped table-advance table-hover">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Link</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for video in videos %}
+          <tr>
+            <td>
+                {{ video.id }}
+            </td>
+            <td>
+                {{ video.link }}
+            </td>
+            <td class="text-right">
+              <a class="btn btn-success btn-sm" href="{{ path('synapse_admin_video_edition', { id: video.id }) }}">
+                <i class="fa fa-edit"></i>
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-fix">
+    <div class="button-bar" data-spy="affix" data-offset-top="55">
+      <a class="btn btn-big btn-primary" href="{{ path('synapse_admin_video_creation') }}">
+        <i class="fa fa-plus"></i>
+        <span>Create</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

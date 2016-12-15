@@ -23,6 +23,8 @@ services:
             - MYSQL_DATABASE=site
         expose:
             - 3306
+        ports:
+            - 3310:3306
         networks:
             back:
                 aliases:

@@ -1,6 +1,6 @@
-AppBundle\ContentType\Video\Entity:
+AppBundle\Entity\Video:
     type: entity
-    repositoryClass: AppBundle\ContentType\Video\Repository
+    repositoryClass: AppBundle\Repository\VideoRepository
     table: video
     id:
         id:

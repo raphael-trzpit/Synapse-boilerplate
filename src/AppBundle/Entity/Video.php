@@ -1,14 +1,19 @@
 <?php
 
-namespace AppBundle\ContentType\Video;
+namespace AppBundle\Entity;
 
 use Synapse\Cmf\Framework\Theme\Content\Model\ContentInterface;
 
-class Entity implements ContentInterface
+class Video implements ContentInterface
 {
     protected $id;
 
     protected $link;
+
+    public function getId()
+    {
+        return $this->id;
+    }
 
     public function getContentId()
     {

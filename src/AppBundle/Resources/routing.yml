@@ -1,0 +1,4 @@
+# Videos.
+synapse_admin_video:
+    resource: 'routing_video.yml'
+    prefix: /videos

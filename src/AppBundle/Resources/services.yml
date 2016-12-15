@@ -4,7 +4,13 @@ services:
         arguments:
             - '@synapse'
 
-    # app.video.repository:
-    #     class: AppBundle\ContentType\Video\Repository
-    #     factory: ['@doctrine', getRepository]
-    #     arguments: ['AppBundle\ContentType\Video\Entity']
+    app.video.repository:
+        class: AppBundle\Repository\VideoRepository
+        factory: ['@doctrine', getRepository]
+        arguments: ['AppBundle\Entity\Video', 'app']
+
+    app.video.param_converter:
+        class: AppBundle\Controller\ParamConverter\VideoParamConverter
+        arguments: ['@app.video.repository']
+        tag:
+            - {name: request.param_converter, converter: video, priority: 10}

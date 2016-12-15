@@ -1,0 +1,25 @@
+# video list
+synapse_admin_video_list:
+    path: /
+    defaults:
+        _controller: "AppBundle:VideoAdmin:list"
+
+# video creation
+synapse_admin_video_creation:
+    path: /create
+    defaults:
+        _controller: "AppBundle:VideoAdmin:create"
+    methods:
+        - GET
+        - POST
+
+# video edition
+synapse_admin_video_edition:
+    path: /{id}/edit
+    defaults:
+        _controller: "AppBundle:VideoAdmin:edit"
+    methods:
+        - GET
+        - POST
+    requirements:
+        id: \d+

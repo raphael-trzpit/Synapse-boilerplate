@@ -1,0 +1,11 @@
+{% extends 'SynapsePageBundle::base.html.twig' %}
+
+{% block menu_elements %}
+  <li class="menu-item">
+    <a class="menu-link" href="{{ path('synapse_admin_video_list') }}">
+      <i class="icon fa fa-file-video-o"></i>
+      <span class="menu-label">Videos</span>
+    </a>
+  </li>
+  {{ parent() }}
+{% endblock %}
