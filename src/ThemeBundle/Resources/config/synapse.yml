@@ -9,14 +9,25 @@ synapse:
                 footer:
                     social: ~
                     free: ~
+            small-video:
+                header:
+                    free: ~
+                content:
+                    free: ~
+                footer:
+                    social: ~
+            test:
+                header: ~
 
         templates:
             video:
                 path: "ThemeBundle:Template:video.html.twig"
+            small-video:
+                path: "ThemeBundle:Template:small-video.html.twig"
 
         zones:
             header:
-                virtual: true
+                virtual: false
                 aggregation: inline
             content:
                 main: true

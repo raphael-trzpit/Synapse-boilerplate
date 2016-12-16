@@ -9,3 +9,10 @@ app_front_video_video:
         _controller: "AppBundle:VideoFront:showTemplateVideo"
     requirements:
         id: \d+
+
+app_front_video_small_video:
+    path: /videos/small-video/{id}
+    defaults:
+        _controller: "AppBundle:VideoFront:showTemplateSmallVideo"
+    requirements:
+        id: \d+

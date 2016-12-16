@@ -18,4 +18,15 @@ class VideoFrontController extends Controller
             ))
         ;
     }
+
+    public function showTemplateSmallVideoAction(Video $video, Request $request)
+    {
+        return $this->get('synapse')
+            ->createDecorator($video, 'small_video')
+            ->decorate(array(
+                'video' => $video,
+                'request' => $request,
+            ))
+        ;
+    }
 }

@@ -1,0 +1,21 @@
+{% extends 'ThemeBundle::layout.html.twig' %}
+
+{% block body %}
+<h1>My small-video template</h1>
+<div class="container">
+
+{% block content %}
+    <div class="row">
+        {{ synapse_zone('content') }}
+    </div>
+{% endblock %}
+
+
+    <footer>
+        <div class="row">
+            {{ synapse_zone('footer')}}
+        </div>
+    </footer>
+</div> <!-- /container -->
+
+{% endblock %}
