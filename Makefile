@@ -6,6 +6,9 @@ vm-stop:
 ssh:
 	docker exec -it php_site bash
 
+mysql:
+	docker exec -it mysql_synapse bash
+
 init-synapse: create-database-synapse update-schema-synapse install-assets-synapse install-fixtures-synapse cache-clear
 
 create-database-synapse:
